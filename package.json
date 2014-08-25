@@ -67,7 +67,8 @@
     "sprintf-js": "0.0.7",
     "tmp": "~0.0.16",
     "underscore": "~1.4.2",
-    "jsqrcode": "0.0.6"
+    "jsqrcode": "0.0.6",
+    "nodetime": "0.8.15"
   },
   "devDependencies": {
     "mocha": "~1.7.4",

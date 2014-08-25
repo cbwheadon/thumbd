@@ -1,4 +1,11 @@
 #!/usr/bin/env node
+if(process.env.NODETIME_ACCOUNT_KEY) {
+  require('nodetime').profile({
+    accountKey: process.env.NODETIME_ACCOUNT_KEY,
+    appName: 'thumbd' // optional
+  });
+}
+
 var thumbd = require('../lib'),
 	_ = require('underscore'),
 	fs = require('fs'),
