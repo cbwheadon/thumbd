@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+require('newrelic');
 var thumbd = require('../lib'),
 	_ = require('underscore'),
 	fs = require('fs'),
