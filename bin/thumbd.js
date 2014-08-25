@@ -111,7 +111,16 @@ switch (mode) {
 
 		var opts = buildOpts(serverOpts);
 		config.extend(opts);
-		setupSQSMessage();
+
+		var grabber = new thumbd.Grabber();
+		var saver = new thumbd.Saver();
+		var thumbnailer = new thumbd.Thumbnailer();
+
+		(new thumbd.Worker({
+			thumbnailer: thumbnailer,
+			saver: saver,
+			grabber: grabber
+		})).start();
 		break;
 
 	case 'thumbnail':
